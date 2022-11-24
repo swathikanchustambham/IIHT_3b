@@ -1,0 +1,126 @@
+//start coding a new program
+class Product {​​​​​
+
+    private int id;
+
+    private String name;
+
+    private float price;     public Product(int id, String name, float price) {​​​​​
+
+        super();
+
+        this.id = id;
+
+        this.name = name;
+
+        this.price = price;
+
+    }​​​​​     public int getId() {​​​​​
+
+        return id;
+
+    }​​​​​     public void setId(int id) {​​​​​
+
+        this.id = id;
+
+    }​​​​​     public String getName() {​​​​​
+
+        return name;
+
+    }​​​​​     public void setName(String name) {​​​​​
+
+        this.name = name;
+
+    }​​​​​     public float getPrice() {​​​​​
+
+        return price;
+
+    }​​​​​     public void setPrice(float price) {​​​​​
+
+        this.price = price;
+
+    }​​​​​     public String show() {​​​​​
+
+        return "Product [id=" + id + ", name=" + name + ", price=" + price + "]";
+
+    }​​​​​
+}
+
+class FurnitureProduct extends Product {​​​​​
+
+    private float length, breadth, height;     
+FurnitureProduct(int id, String name, float price, float length, float breadth, float height) {​​​​​
+
+        super(id, name, price);
+
+        this.length = length;
+
+        this.breadth = breadth;
+
+        this.height = height;
+
+    }​​​​​     public float getLength() {​​​​​
+
+        return length;
+
+    }​​​​​     public void setLength(float length) {​​​​​
+
+        this.length = length;
+
+    }​​​​​     public float getBreadth() {​​​​​
+
+        return breadth;
+
+    }​​​​​     public void setBreadth(float breadth) {​​​​​
+
+        this.breadth = breadth;
+
+    }​​​​​     public float getHeight() {​​​​​
+
+        return height;
+
+    }​​​​​     public void setHeight(float height) {​​​​​
+
+        this.height = height;
+
+    }​​​​​     public String show() {​​​​​
+
+        //how to invoke base class show here??
+
+        return super.show() + "\tFurnitureProduct [length=" + length + ", breadth=" + breadth + ", height=" + height + "]";
+
+    }​​​​​
+
+}​​​​​
+
+class ClothProduct extends Product{
+private String type;    ClothProduct (float length,float breadth,float heigth,String type) {​​​​​
+
+        super(length,breadth,height);
+
+        this.type = type;        
+
+    }​​​​​     public String getType() {​​​​​
+
+        return type;
+
+    }​​​​​     public void setType(String type) {​​​​​
+
+        this.type = type;
+
+    }​​​​​ 
+public String show() {​​​​​
+
+        //how to invoke base class show here??
+
+        return super.show() + "\ClothProduct ["Type="+type+]";
+
+    }​​​​​    
+}
+
+Public class MainProduct{
+    public static void main(String args[]){
+Product p=new Product();
+p.show();
+}
+}
