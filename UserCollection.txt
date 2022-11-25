@@ -1,0 +1,18 @@
+public class UserCollection {​​​​​
+
+   static List<String> printElements(){
+
+        List<String> aluser = new ArrayList<String>();
+
+        aluser.add("cobol");
+
+        aluser.add("python");
+
+        aluser.add("Java");
+for(UserCollection u : aluser){
+System.out.println(u.toString());
+}
+}
+ public static void main(String[] args) {​​​​​
+printElements();
+}
